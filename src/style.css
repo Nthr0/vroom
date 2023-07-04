@@ -18,7 +18,7 @@ p {
   transition-duration: 0.5s;
 }
 .buttons button:active {
-  transition-duration: 0.2s;
+  transition-duration: 0.1s;
   background-color: #a16b56;
   color: white;
   transform: translateY(4px);
