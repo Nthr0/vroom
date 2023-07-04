@@ -1,5 +1,5 @@
 import * as React from 'react';
-import DemoButtons from './ButtonPanel';
+import DemoButtons from './demo-buttons';
 
 import './style.css';
 
