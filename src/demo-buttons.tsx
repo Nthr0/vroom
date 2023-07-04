@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export function DemoButtons() {
+export default function buttonPanel() {
   return (
     <>
       <div className="row1">
