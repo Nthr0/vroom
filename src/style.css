@@ -24,6 +24,7 @@ p {
 .inputBox p{
   width: 100%;
   text-align: center;
+  font-size: large;
 }
 
 .buttons button {

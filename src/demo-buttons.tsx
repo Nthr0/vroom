@@ -1,35 +1,50 @@
 import * as React from 'react';
 import { useState } from 'react';
-
 export default function buttonPanel() {
+  function handleClick(i: string) {
+    console.log(i);
+  }
+//  const [Display, setCount] = useState("");
+//   function handleClick() {   
+
+//     console.log(Display);
+//     setCount(Display);
+//   }
   return (
     <>
-      const [Display, setCount] = useState(0);
       <div className="bigBox">
         <div className="row1">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
+          <MyButton onButtonClick={() => handleClick("1")} Display="1" />
+          <MyButton onButtonClick={() => handleClick("2")} Display="2" />
+          <MyButton onButtonClick={() => handleClick("3")} Display="3" />
         </div>
         <div className="row2">
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
+          <MyButton onButtonClick={() => handleClick("4")} Display="4" />
+          <MyButton onButtonClick={() => handleClick("5")} Display="5" />
+          <MyButton onButtonClick={() => handleClick("6")} Display="6" />
         </div>
         <div className="row3">
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
+          <MyButton onButtonClick={() => handleClick("7")} Display="7" />
+          <MyButton onButtonClick={() => handleClick("8")} Display="8" />
+          <MyButton onButtonClick={() => handleClick("9")} Display="9" />
         </div>
         <div className="row4">
-          <button>x</button>
-          <button>0</button>
+          <MyButton Display="x" onButtonClick={() => handleClick("x")} />
+          <MyButton  Display="0" onButtonClick={() => handleClick("0")} />
           <button>✓</button>
         </div>
         <div className="inputBox">
-          <p>365</p>
+          {/* <p>{Display}</p> */}
         </div>
       </div>
     </>
+  );
+}
+
+function MyButton({ Display, onButtonClick }) {
+  return (
+    <button onClick={onButtonClick}>
+      {Display}
+    </button>
   );
 }
