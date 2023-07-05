@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import VendingMachineApp from './VendingMachineApp';
+import VendingMachineApp from './VendingMachineApp.tsx';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);

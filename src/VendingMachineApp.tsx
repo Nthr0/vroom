@@ -1,33 +1,44 @@
 import * as React from 'react';
-import DemoButtons from './demo-buttons';
+import DemoButtons from './demo-buttons.tsx';
 
 import './style.css';
 
-// export function getProductsData(): Array<product> {
-//   return [
-//     {
-//       name: 'latte',
-//       option: 123,
-//       stocklevel: 10,
-//     },
-//     {
-//       name: 'cappacino',
-//       option: 222,
-//       stocklevel: 10,
-//     },
-//   ];
-// }
+export declare type product = {
+  title: string,
+  option: number,
+  stocklevel: number,
+}
 
-export function getProducts() {
+export function getProducts(): Array<product> {
   return [
-    'latte: 123 ',
-    'cappacino: 222',
-    'expresso: 333',
-    'water: 333',
-    'milk: 444',
-    'coke: 555',
+    {
+      title: 'latte',
+      option: 123,
+      stocklevel: 10,
+    },
+    {
+      title: 'cappacino',
+      option: 222,
+      stocklevel: 10,
+    },
   ];
 }
+
+
+export function ShoppingList() {
+  const listItems = getProducts().map(product =>
+    <li
+      key={product.title}
+    >
+      {product.title}: {product.option}
+    </li>
+  );
+
+  return (
+    <ul>{listItems}</ul>
+  );
+}
+
 
 export default function VendingMachineApp() {
   const buttonData = getProducts();
@@ -39,6 +50,7 @@ export default function VendingMachineApp() {
       <div className="buttons">
         <DemoButtons />
       </div>
+      <ShoppingList />
     </div>
   );
 }
