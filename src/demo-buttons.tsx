@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { useState } from 'react';
+import MyButton from './button.component';
 export default function buttonPanel() {
   function handleClick(i: string) {
-    console.log(i);
+    console.log("vroom");
   }
 //  const [Display, setCount] = useState("");
 //   function handleClick() {   
@@ -41,10 +42,3 @@ export default function buttonPanel() {
   );
 }
 
-function MyButton({ Display, onButtonClick }) {
-  return (
-    <button onClick={onButtonClick}>
-      {Display}
-    </button>
-  );
-}
