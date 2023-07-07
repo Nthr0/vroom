@@ -5,13 +5,15 @@ import { product } from "./product.model";
     return [
       {
         title: 'latte',
-        option: 123,
+        option: "123",
         stocklevel: 10,
+        imageSource: "2",
       },
       {
         title: 'cappacino',
-        option: 222,
+        option: "222",
         stocklevel: 10,
+        imageSource: "2",
       },
     ];
   }

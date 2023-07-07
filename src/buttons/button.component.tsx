@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export function MyButton({ Display, onButtonClick }) {
     return (
-      <button onClick={onButtonClick}>
+      <button className={Display} onClick={onButtonClick}>
         {Display}
       </button>
     );

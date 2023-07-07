@@ -1,7 +1,8 @@
 
 export declare type product = {
     title: string,
-    option: number,
+    option: string,
     stocklevel: number,
+    imageSource: string,
   }
   

@@ -1,10 +1,11 @@
-h1,
-p {
-  font-family: Lato;
-}
 .bigBox {
   width: fit-content;
-  height: 325px;
+  background-color: #dbdbdb;
+  width: 220px;
+  padding: 10px;
+}
+.productBox {
+  width: fit-content;
   background-color: #dbdbdb;
   width: 220px;
 }
@@ -20,12 +21,11 @@ p {
   border-radius: 0.3rem;
   display: flex;
   align-items: center;
-  justify-items: center;
 }
 .inputBox p{
   width: 100%;
-  text-align: center;
-  font-size: large;
+  font-size: x-large;
+  text-align:center;
 }
 .buttons ul{
   padding: 0 0 0 0;
