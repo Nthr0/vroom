@@ -28,7 +28,7 @@ import { product } from "./product.model";
         imageSource: "Lemonade.png",
       },
       {
-        title: 'Sparkling water',
+        title: 'Soda',
         option: "483",
         stocklevel: 10,
         imageSource: "Sparkling-water.png",

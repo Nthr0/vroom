@@ -1,11 +1,17 @@
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .bigBox {
   width: fit-content;
   background-color: #dbdbdb;
   width: 220px;
+  height: 460px;
   padding: 10px;
 }
 .productBox {
   width: 500px;
+  height: 400px;
   padding: 10px;
   background-color: #dbdbdb;
 }
@@ -32,22 +38,29 @@
   width: 180px;
   margin: auto auto auto auto;
 }
-.buttons button {
-  margin: 5px;
-  height: 50px;
-  width: 50px;
+.buttons button, .vendBtn {
   font-size: large;
-  background-color: none;
   border: 2px solid #a16b56;
   border-radius: 0.3rem;
   box-shadow: 0 9px #58443c;
 }
-.buttons button:hover {
+.vendBtn {
+  width: 90%;
+  height: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.buttons button {
+  margin: 5px;
+  height: 50px;
+  width: 50px;
+}
+.buttons button:hover,.vendBtn:hover {
   background-color: #a16b56;
   color: white;
   transition-duration: 0.5s;
 }
-.buttons button:active {
+.buttons button:active,.vendBtn:active {
   transition-duration: 0.1s;
   background-color: #a16b56;
   color: white;
@@ -55,26 +68,32 @@
   box-shadow: 0 5px #58443c;
 }
 .productCards ul {
+  max-height: 370;
   display: flex;
   flex-direction: row;
   list-style: none;
   flex-wrap:wrap;
+  padding: 0 0 0 20;
+  margin-top: 5px;
 }
 
 .productCards ul li {
   justify-self: center;
   align-self: center;
-  border: #58443c 4px solid;
+  border: #a16b56 2px solid;
   border-radius: 15px;
-  height: 150px;
+  height: 170px;
+  width: 130px;
   margin: 10px;
+  background-color: #f5f5f5;
 }
 
 .productCards ul li span {
-  width: 150px;
+  width: 120px;
   display: flex;
   justify-content: center;
   align-content: center;
+  position: relative;
 }
 .productImageWrapper {
   height: 100px;
@@ -84,6 +103,51 @@
 .productTitle {
   align-self: center;
   /* background-color: red; */
-  font-size: large;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size:medium;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-container {
+  flex: 1;
+  max-width: 230px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.right-container {
+  flex: 1;
+  padding: 20px;
+  max-height: 420px;
+  background-color: #f2f2f2;
+}
+.productTitle {
+  position: relative;
+  height: 50px;
+}
+.productTitle p {
+  text-align: center;
+  margin: 0;
+}
+.top, .bottom {
+  position: absolute;
+  width: 100%;
+}
+
+.top {
+  top: 0;
+  height: 50%;
+}
+
+.bottom {
+  bottom: 0;
+  height: 50%;
+}
+.vendDraw {
+  height: 100px;
+  width: 500px;
+  background-color: gray;
+  margin: 10px;
 }

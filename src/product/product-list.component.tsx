@@ -8,7 +8,12 @@ export function ProductList({ products }) {
           <img className="productImage" src={require('./../media/' + product.imageSource)}></img>
         </span>
         <span className="productTitle">
-          {product.title}: {product.option}
+          <div className='top'>
+            <p><strong>{product.title}</strong></p>
+          </div>
+          <div className='bottom'>
+            <p>{product.option}</p>
+          </div>
         </span>
       </li>
     </>
