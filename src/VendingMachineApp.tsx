@@ -5,10 +5,11 @@ import { SelectionDisplay } from './selection/selection-display.component.tsx';
 import { ProductList } from './product/product-list.component.tsx';
 import './style.css';
 import { ButtonPanel } from './buttons/button-panel.tsx';
-import { ProductVendDraw } from './product/product-vend-draw.component.js';
+import { VendList } from './product/product-vend-draw.component.tsx';
 
 export const MAX_CHAR_ENTRY = 3;
 const buttonPanelData = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "x", "0", "✓"];
+var num = 1
 
 export default function VendingMachineApp() {
   const productsData = getProducts();
@@ -29,12 +30,18 @@ export default function VendingMachineApp() {
   function vendItem() {
     const product = getCurrentProduct();
     if (product) {
-      vendingProductSelected(a => [...a, product]);
-      console.log({vendingProducts})
+      if (message =="Valid") {
+        console.log(num)
+        num = num + 1
+        vendingProductSelected(a => [...a, product]);
+      }
 
     }
   }
 
+  function destroyItem() {
+
+  }
   function handleSelection(i: string) {
     console.log(i);
     if (i == "x") {
@@ -63,8 +70,7 @@ export default function VendingMachineApp() {
 
   return (
     <div>
-      <h1>Hello World 0-0</h1>
-      <p>I don't get typescript at all (╯°□°）╯︵ ┻━┻</p>
+      <h1>Vending Machine Simulator</h1>
 
       <div className='container'>
         <div className='left-container'>
@@ -82,8 +88,10 @@ export default function VendingMachineApp() {
             <ProductList products={productsData} />
           </div>
           <div className='vendDraw' >
-            <p>Collect your product</p>
-            <ProductList products={vendingProducts} />
+            <div className='engravedText'>
+              <p>Collect your product</p>
+            </div>
+            <VendList products={vendingProducts} idMaker={num}/>
           </div>
         </div>
       </div>

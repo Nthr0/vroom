@@ -9,7 +9,7 @@ export function ProductList({ products }) {
         </span>
         <span className="productTitle">
           <div className='top'>
-            <p><strong>{product.title}</strong></p>
+            <p>{product.title}</p>
           </div>
           <div className='bottom'>
             <p>{product.option}</p>

@@ -1,5 +1,14 @@
+
 * {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: lighter;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  margin-bottom: 10px;
 }
 
 .bigBox {
@@ -97,17 +106,15 @@
 }
 .productImageWrapper {
   height: 100px;
-  /* background-color: aqua; */
   padding: 10 0 10 0;
 }
 .productTitle {
   align-self: center;
-  /* background-color: red; */
   font-size:medium;
 }
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .left-container {
@@ -120,7 +127,7 @@
 .right-container {
   flex: 1;
   padding: 20px;
-  max-height: 420px;
+  max-width: max-content;
   background-color: #f2f2f2;
 }
 .productTitle {
@@ -140,14 +147,71 @@
   top: 0;
   height: 50%;
 }
-
+.top p{
+  font-size: large;
+}
 .bottom {
   bottom: 0;
   height: 50%;
 }
 .vendDraw {
+  border: #a16b56 2px solid;
+  border-radius: 0.3rem;
   height: 100px;
   width: 500px;
-  background-color: gray;
-  margin: 10px;
+  background-color: rgb(180 195 244);
+  fill-opacity: 50%;
+  margin: 25 10 10 10;
+}
+.vendDraw p {
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+  position:absolute;
+}
+.vendCards ul {
+  max-height: 100px;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  flex-wrap:wrap;
+  padding: 0 0 0 20;
+  margin: 0;
+}
+.vendCards ul li span {
+  padding: 0;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+}
+.vendCards ul li {
+  justify-self: center;
+  align-self: center;
+}
+.engravedText {
+  font-family: Fantasy;
+  font-size: 20px;
+  font-family: Futura;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: rgba(245,245,245,0.5) 3px 5px 1px;
+}
+.productButton {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  transition-delay: 4s;
+  animation-delay: 4s;
+}
+.productButton:hover img {
+  max-height: 102px;
+  filter: drop-shadow(5px 0px 2px  #58443c);
+}
+.productButton img {
+  max-height: 100px;
 }
