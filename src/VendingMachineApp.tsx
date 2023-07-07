@@ -55,17 +55,8 @@ export default function VendingMachineApp() {
         <SelectionDisplay selection={selected}/>
       </div>
     <div className='productBox'>
-      <img src="src\media\Latte.png"></img>
       {ItemList}
     </div>
     </div>
   );
 }
-
-// export default function OptionButton(buttonOption) {
-//   return (
-//     <button>{{buttonOption}}</button>
-//   )
-// }
-
-
